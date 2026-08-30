@@ -10,8 +10,8 @@ cd gnn
 uv sync
 uv run jupyter nbconvert --to notebook --execute \
   --ExecutePreprocessor.timeout=3600 \
-  --output gnn_ex1.1_basics_solution.evaluated.ipynb \
-  gnn_ex1.1_basics_solution.ipynb
+  --output 01_gnn_basics_solution.evaluated.ipynb \
+  01_gnn_basics_solution.ipynb
 ```
 
 The exercise notebook contains incomplete tasks and will only run fully after
@@ -29,8 +29,8 @@ uv run jupyter nbconvert --to notebook --execute \
 
 uv run jupyter nbconvert --to notebook --execute \
   --ExecutePreprocessor.timeout=3600 \
-  --output 01_random_signal_rul_picid_experiment.evaluated.ipynb \
-  01_random_signal_rul_picid_experiment.ipynb
+  --output 01_picid_rul_experiment.evaluated.ipynb \
+  01_picid_rul_experiment.ipynb
 ```
 
 Each command writes an evaluated copy and does not overwrite the source

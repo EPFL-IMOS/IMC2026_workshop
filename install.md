@@ -1,31 +1,55 @@
 # Installation
 
-## Install the UV Package Manager
-In this workshop, we use the uv package manager.
-Please install [UV](https://docs.astral.sh/uv/) first.
+The `gnn` and `picid` directories are independent Python projects. Run the
+commands below from the repository root; do not create a shared root
+environment.
 
-You need [Git](https://github.com/git-guides/install-git) to clone (to your computer) the repository.
+## 1. Install the prerequisites
 
-We recommend to use [VSCode](https://code.visualstudio.com/download) as a coding environment.
+Install [Git](https://git-scm.com/downloads) and
+[uv](https://docs.astral.sh/uv/getting-started/installation/).
 
-## Install the GNN environment
-Each sub-project has its own environment. Sync the locked GNN environment from
-the `gnn` directory:
-
-```bash
-cd gnn
-uv sync
-```
-
-In VSCode, select `gnn/.venv/bin/python` as the notebook kernel. Commands can
-also be run without activating the environment by prefixing them with `uv run`.
-
-## Install the PICID environment
-Sync the independent PICID environment from its sub-project directory:
+macOS or Linux:
 
 ```bash
-cd picid
-uv sync
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-In VSCode, select `picid/.venv/bin/python` as the notebook kernel.
+Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Confirm that uv is available:
+
+```bash
+uv --version
+```
+
+## 2. Install the project environments
+
+Sync both environments from their committed lockfiles:
+
+```bash
+(cd gnn && uv sync --locked)
+(cd picid && uv sync --locked)
+```
+
+uv installs the required Python versions and creates these environments:
+
+- `gnn/.venv` using Python 3.11.12
+- `picid/.venv` using Python 3.12
+
+## 3. Select a notebook kernel
+
+In VS Code or another notebook editor, select the environment belonging to the
+notebook:
+
+- GNN: `gnn/.venv/bin/python`
+- PICID: `picid/.venv/bin/python`
+
+On Windows, the equivalent paths end in `.venv\Scripts\python.exe`.
+
+See [README.md](README.md) for commands that execute the notebooks into
+separate `*.evaluated.ipynb` files.

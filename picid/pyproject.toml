@@ -17,7 +17,7 @@ dependencies = [
 package = false
 
 [tool.uv.sources]
-picid = { git = "https://github.com/EPFL-IMOS/TabPHM.git", branch = "release" }
+picid = { git = "https://github.com/EPFL-IMOS/picid", branch = "release" }
 
 [tool.ruff]
 line-length = 88
