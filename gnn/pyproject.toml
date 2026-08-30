@@ -1,0 +1,26 @@
+[project]
+name = "imc-gnn-notebooks"
+version = "0.1.0"
+description = "Reproducible environment for the IMC GNN workshop notebooks"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "ipykernel==6.30.1",
+    "lightning==2.5.3",
+    "matplotlib==3.10.5",
+    "networkx==3.5",
+    "numpy==2.3.2",
+    "pandas==2.3.2",
+    "pytorch-lightning==2.5.3",
+    "tensorboard==2.20.0",
+    "torch==2.3.0",
+    "torch-geometric==2.6.1",
+    "torchmetrics==1.8.1",
+]
+
+[dependency-groups]
+dev = [
+    "nbconvert==7.16.6",
+]
+
+[tool.uv]
+package = false

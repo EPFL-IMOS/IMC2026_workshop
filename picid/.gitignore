@@ -1,0 +1,10 @@
+.cache/
+.ipynb_checkpoints/
+.model_cache/
+.venv/
+artifacts/
+build/
+data/
+!test/data/
+!test/data/**
+__pycache__/

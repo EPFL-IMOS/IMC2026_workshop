@@ -1,0 +1,23 @@
+[project]
+name = "imc-picid-experiment-workshop"
+version = "0.1.0"
+description = "Self-contained PicidExperiment workshop materials"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "jupyter>=1.1.1",
+  "picid",
+  # PICID imports this at runtime but does not currently declare it itself.
+  "pydantic-settings>=2.0",
+  # PICID reloads full Lightning checkpoints containing Hydra objects. PyTorch
+  # 2.6+ defaults torch.load() to weights-only mode and rejects those objects.
+  "torch>=2.5,<2.6",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+picid = { git = "https://github.com/EPFL-IMOS/TabPHM.git", branch = "release" }
+
+[tool.ruff]
+line-length = 88
