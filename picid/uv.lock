@@ -955,7 +955,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "jupyter", specifier = ">=1.1.1" },
-    { name = "picid", git = "https://github.com/EPFL-IMOS/TabPHM.git?branch=release" },
+    { name = "picid", git = "https://github.com/EPFL-IMOS/picid?branch=release" },
     { name = "pydantic-settings", specifier = ">=2.0" },
     { name = "torch", specifier = ">=2.5,<2.6" },
 ]
@@ -2136,7 +2136,7 @@ wheels = [
 [[package]]
 name = "picid"
 version = "0.1.0"
-source = { git = "https://github.com/EPFL-IMOS/TabPHM.git?branch=release#d803b77bcd15f353e8a91e8bc1e7c9121cfb056b" }
+source = { git = "https://github.com/EPFL-IMOS/picid?branch=release#d803b77bcd15f353e8a91e8bc1e7c9121cfb056b" }
 dependencies = [
     { name = "awkward" },
     { name = "cloudpickle" },
